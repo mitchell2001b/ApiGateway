@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route1
+          uri: http://localhost:8080/api/accounts
+          predicates:
+            - Path=/test
+          filters:
+            - SetPath=/api/accounts/testcall
+
+
+
+logging:
+  level:
+    root: DEBUG
