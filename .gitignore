@@ -1,7 +1,6 @@
 HELP.md
-target/
-!Apigateway-0.0.1-SNAPSHOT.jar
-!Apigateway-0.0.1-SNAPSHOT.jar.original
+
+
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
