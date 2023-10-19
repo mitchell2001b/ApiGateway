@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+
+  api-gateway:
+    image: ghcr.io/mitchell2001b/apigateway:main
+    ports:
+      - "8585:8585"
+    networks:
+      - semester6project_network
+
+networks:
+  semester6project_network:
+    external: true
+    name: semester6project_network
