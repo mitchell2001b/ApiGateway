@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: route1
+          uri: http://user-registration-microservice:8080/api/accounts/testcall
+          predicates:
+            - Path=/test
+          filters:
+            - SetPath=/api/accounts/testcall
+        - id: route2
+          uri: http://user-login-microservice:8282/api/accounts/login
+          predicates:
+            - Path=/login
+          filters:
+            - SetPath=/api/accounts/login
+
+
+
+logging:
+  level:
+    root: DEBUG
