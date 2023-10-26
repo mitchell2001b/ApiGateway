@@ -20,3 +20,8 @@ spring:
 logging:
   level:
     root: DEBUG
+
+
+
+allowed:
+  origins: http://localhost:8787,http://taskboarding-frontend:8787
