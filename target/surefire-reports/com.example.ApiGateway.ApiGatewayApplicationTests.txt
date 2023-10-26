@@ -1,4 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.example.ApiGateway.ApiGatewayApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.638 s - in com.example.ApiGateway.ApiGatewayApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.069 s <<< FAILURE! - in com.example.ApiGateway.ApiGatewayApplicationTests
+contextLoads  Time elapsed: 0.011 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'CORSConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'allowed.origins' in value "${allowed.origins}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'allowed.origins' in value "${allowed.origins}"
+
