@@ -1,6 +1,13 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
       routes:
         - id: route1
           uri: http://user-registration-microservice:8080/api/accounts/testcall
@@ -23,5 +30,3 @@ logging:
 
 
 
-allowed:
-  origins: http://localhost:8787,http://taskboarding-frontend:8787
