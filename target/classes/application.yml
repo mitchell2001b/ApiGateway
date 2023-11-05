@@ -20,27 +20,6 @@ spring:
             - Path=/register
           filters:
             - SetPath=/api/accounts/create
-
-globalcors:
-  corsConfigurations:
-    '[/**]':
-      allowedOrigins:
-        - http://localhost:8787
-        - http://taskboarding-frontend:8787
-        - https://localhost:8787
-        - https://taskboarding-frontend:8787
-      allowedMethods:
-        - GET
-        - POST
-        - PUT
-        - DELETE
-        - OPTIONS
-      allowedHeaders:
-        - Content-Type
-        - Authorization
-      maxAge: 3600
-      allowCredentials: true
-
 logging:
   level:
     root: DEBUG
