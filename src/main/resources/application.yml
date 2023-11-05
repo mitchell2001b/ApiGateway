@@ -14,6 +14,12 @@ spring:
             - Path=/login
           filters:
             - SetPath=/api/accounts/login
+        - id: route3
+          uri: http://user-registration-microservice:8080/api/accounts/create
+          predicates:
+            - Path=/register
+          filters:
+            - SetPath=/api/accounts/create
 
 
 
