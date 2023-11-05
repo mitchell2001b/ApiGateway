@@ -8,7 +8,7 @@ spring:
           '[/**]':
             allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787"
             allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
-            allowed-headers: "*"
+            allowed-headers: "Content-Type, Authorization, Origin"
             allow-credentials: true
             max-age: 3600
       routes:
@@ -30,6 +30,7 @@ spring:
             - Path=/register
           filters:
             - SetPath=/api/accounts/create
+
 logging:
   level:
     root: DEBUG
