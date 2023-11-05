@@ -7,7 +7,7 @@ spring:
         cors-configurations:
           '[/**]':
             allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787"
-            allowed-methods: "*"
+            allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
             allowed-headers: "*"
             allow-credentials: true
             max-age: 3600
