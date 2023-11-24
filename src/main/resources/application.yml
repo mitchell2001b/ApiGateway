@@ -39,7 +39,7 @@ spring:
         - id: route5
           uri: http://projectservice:8888/api/projects/myprojects
           predicates:
-             - Path=/newproject
+             - Path=/myprojects
          filters:
            - SetPath=/api/projects/myprojects
 
