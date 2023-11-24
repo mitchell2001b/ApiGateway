@@ -6,7 +6,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787"
+            allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787,http://localhost:8787,http://taskboarding-frontend:3001,https://localhost:3001,https://taskboarding-frontend:3001"
             allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
             allowed-headers: "Content-Type, Authorization, Origin"
             allow-credentials: true
@@ -30,6 +30,18 @@ spring:
             - Path=/register
           filters:
             - SetPath=/api/accounts/create
+        - id: route4
+          uri: http://projectservice:8888/api/projects/create
+          predicates:
+            - Path=/newproject
+          filters:
+            - SetPath=/api/projects/create
+        - id: route5
+          uri: http://projectservice:8888/api/projects/myprojects
+          predicates:
+             - Path=/newproject
+         filters:
+           - SetPath=/api/projects/myprojects
 
 logging:
   level:
