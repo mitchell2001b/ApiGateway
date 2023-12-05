@@ -6,7 +6,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787,http://localhost:8787,http://taskboarding-frontend:3001,https://localhost:3001,https://taskboarding-frontend:3001,http://localhost:3001, http://taskboarding-frontend.localhost:9080, http://taskboarding-frontend:9080"
+            allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787,http://localhost:8787,http://taskboarding-frontend:3001,https://localhost:3001,https://taskboarding-frontend:3001,http://localhost:3001, http://taskboarding-frontend.localhost:9080, http://taskboarding-frontend:9080, http://taskboarding-frontend-service:80/project/create, http://localhost:80/project/create"
             allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
             allowed-headers: "Content-Type, Authorization, Origin, Accept, X-Requested-With, X-Auth-Token, method"
             allow-credentials: true
