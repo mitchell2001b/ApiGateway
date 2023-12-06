@@ -1,8 +1,3 @@
-spring:
-  profiles:
-    active: prod
-
----
 
 spring:
   profiles: prod
@@ -38,22 +33,18 @@ spring:
             - Path=/register
           filters:
             - SetPath=/api/accounts/create
-
-        - id: ${ROUTE_4_PROD_ID:route4}
-          uri: ${ROUTE_4_PROD_URI:http://projectservice:8888/api/projects/create}
+        - id: route4
+          uri: http://projectservice:8888/api/projects/create
           predicates:
-            - Path=${ROUTE_4_PROD_PREDICATES:/newproject}
+            - Path=/newproject
           filters:
-            - SetPath=${ROUTE_4_PROD_FILTERS:/api/projects/create}
-
-        - id: ${ROUTE_5_PROD_ID:route5}
-          uri: ${ROUTE_5_PROD_URI:http://projectservice:8888/api/projects/myprojects}
+            - SetPath=/api/projects/create
+        - id: route5
+          uri: http://projectservice:8888/api/projects/myprojects
           predicates:
-            - Path=${ROUTE_5_PROD_PREDICATES:/myprojects}
+            - Path=/myprojects
           filters:
-            - SetPath=${ROUTE_5_PROD_FILTERS:/api/projects/myprojects}
-
----
+            - SetPath=/api/projects/myprojects
 
 logging:
   level:
