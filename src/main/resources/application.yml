@@ -40,9 +40,9 @@ spring:
         - id: ${ROUTE_5_PROD_ID}
           uri: ${ROUTE_5_PROD_URI}
           predicates:
-            - Path=/myprojects
+            - ${ROUTE_5_PROD_PREDICATES}
           filters:
-            - SetPath=/api/projects/myprojects
+            - ${ROUTE_5_PROD_FILTERS}
 
 logging:
   level:
