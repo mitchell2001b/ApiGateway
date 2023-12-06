@@ -31,18 +31,19 @@ spring:
             - Path=/register
           filters:
             - SetPath=/api/accounts/create
-        - id: route4
-          uri: http://projectservice:8888/api/projects/create
+        - id: ${ROUTE_4_PROD_ID}
+          uri: ${ROUTE_4_PROD_URI}
           predicates:
-            - Path=/newproject
+            - Path=${ROUTE_4_PROD_PREDICATES}
           filters:
-            - SetPath=/api/projects/create
+            - SetPath=${ROUTE_4_PROD_FILTERS}
+
         - id: ${ROUTE_5_PROD_ID}
           uri: ${ROUTE_5_PROD_URI}
           predicates:
-            - Path=/myprojects
+            - Path=${ROUTE_5_PROD_PREDICATES}
           filters:
-            - SetPath=/api/projects/myprojects
+            - SetPath=${ROUTE_5_PROD_FILTERS}
 
 logging:
   level:
