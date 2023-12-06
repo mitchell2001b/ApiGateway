@@ -11,7 +11,7 @@ import org.springframework.core.env.StandardEnvironment;
 
 import java.util.Map;
 import java.util.stream.Collectors;
-
+@SpringBootApplication
 public class ApiGatewayApplication {
 
 
