@@ -39,8 +39,8 @@ spring:
           filters:
             - SetPath=/api/accounts/create
 
-        - id: ${ROUTE_4_PROD_ID:route4}
-          uri: ${ROUTE_4_PROD_URI:http}
+        - id: ${ROUTE_4_PROD_ID}
+          uri: ${ROUTE_4_PROD_URI}
           predicates:
             - Path=${ROUTE_4_PROD_PREDICATES}
           filters:
