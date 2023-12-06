@@ -37,8 +37,8 @@ spring:
             - Path=/newproject
           filters:
             - SetPath=/api/projects/create
-        - id: route5
-          uri: http://projectservice:8888/api/projects/myprojects
+        - id: ${ROUTE_5_PROD_ID}
+          uri: ${ROUTE_5_PROD_URI}
           predicates:
             - Path=/myprojects
           filters:
