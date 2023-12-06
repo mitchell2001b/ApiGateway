@@ -19,7 +19,11 @@
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
 	</properties>
 	<dependencies>
-
+		<dependency>
+			<groupId>io.github.cdimascio</groupId>
+			<artifactId>dotenv-java</artifactId>
+			<version>2.3.1</version>
+		</dependency>
 		<!-- Spring Boot Starter Web for creating a Spring Boot application -->
 		<!-- Spring Cloud Gateway Starter for Spring Cloud Gateway support -->
 		<dependency>
