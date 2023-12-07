@@ -1,0 +1,52 @@
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "http://localhost:8787,http://taskboarding-frontend:8787,https://localhost:8787,https://taskboarding-frontend:8787,http://localhost:8787,http://taskboarding-frontend:3001,https://localhost:3001,https://taskboarding-frontend:3001,http://localhost:3001, http://taskboarding-frontend.localhost:9080, http://taskboarding-frontend:9080, http://taskboarding-frontend-service:80/project/create, http://localhost:80/project/create"
+            allowed-methods: "GET, POST, PUT, DELETE, OPTIONS"
+            allowed-headers: "Content-Type, Authorization, Origin, Accept, X-Requested-With, X-Auth-Token, method"
+            allow-credentials: true
+            max-age: 3600
+      routes:
+        - id: route1
+          uri: http://user-registration-microservice:8080/api/accounts/testcall
+          predicates:
+            - Path=/test
+          filters:
+            - SetPath=/api/accounts/testcall
+        - id: route2
+          uri: http://user-login-microservice:8282/api/accounts/login
+          predicates:
+            - Path=/login
+          filters:
+            - SetPath=/api/accounts/login
+        - id: route3
+          uri: http://user-registration-microservice:8080/api/accounts/create
+          predicates:
+            - Path=/register
+          filters:
+            - SetPath=/api/accounts/create
+        - id: ${ROUTE_4_PROD_ID}
+          uri: ${ROUTE_4_PROD_URI}
+          predicates:
+            - ${ROUTE_4_PROD_PREDICATES}
+          filters:
+            - ${ROUTE_4_PROD_FILTERS}
+        - id: ${ROUTE_5_PROD_ID}
+          uri: ${ROUTE_5_PROD_URI}
+          predicates:
+            - ${ROUTE_5_PROD_PREDICATES}
+          filters:
+            - ${ROUTE_5_PROD_FILTERS}
+
+logging:
+  level:
+    root: DEBUG
+
+
+

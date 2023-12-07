@@ -1,5 +1,8 @@
 
 spring:
+  profiles:
+    active: prod
+
   cloud:
     gateway:
       default-filters:
