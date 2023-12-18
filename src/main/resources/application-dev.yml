@@ -19,30 +19,42 @@ spring:
             - Path=/test
           filters:
             - SetPath=/api/accounts/testcall
-        - id: route2
-          uri: http://user-login-microservice:8282/api/accounts/login
+        - id: ${ROUTE_2_DEV_ID}
+          uri: ${ROUTE_2_DEV_URI}
           predicates:
-            - Path=/login
+            - ${ROUTE_2_DEV_PREDICATES}
           filters:
-            - SetPath=/api/accounts/login
-        - id: route3
-          uri: http://user-registration-microservice:8080/api/accounts/create
+            - ${ROUTE_2_DEV_FILTERS}
+        - id: ${ROUTE_3_DEV_ID}
+          uri: ${ROUTE_3_DEV_URI}
           predicates:
-            - Path=/register
+            - ${ROUTE_3_DEV_PREDICATES}
           filters:
-            - SetPath=/api/accounts/create
-        - id: ${ROUTE_4_PROD_ID}
-          uri: ${ROUTE_4_PROD_URI}
+            - ${ROUTE_3_DEV_FILTERS}
+        - id: ${ROUTE_4_DEV_ID}
+          uri: ${ROUTE_4_DEV_URI}
           predicates:
-            - ${ROUTE_4_PROD_PREDICATES}
+            - ${ROUTE_4_DEV_PREDICATES}
           filters:
-            - ${ROUTE_4_PROD_FILTERS}
-        - id: ${ROUTE_5_PROD_ID}
-          uri: ${ROUTE_5_PROD_URI}
+            - ${ROUTE_4_DEV_FILTERS}
+        - id: ${ROUTE_5_DEV_ID}
+          uri: ${ROUTE_5_DEV_URI}
           predicates:
-            - ${ROUTE_5_PROD_PREDICATES}
+            - ${ROUTE_5_DEV_PREDICATES}
           filters:
-            - ${ROUTE_5_PROD_FILTERS}
+            - ${ROUTE_5_DEV_FILTERS}
+        - id: ${ROUTE_6_DEV_ID}
+          uri: ${ROUTE_6_DEV_URI}
+          predicates:
+            - ${ROUTE_6_DEV_PREDICATES}
+          filters:
+           - ${ROUTE_6_DEV_FILTERS}
+        - id: ${ROUTE_7_DEV_ID}
+          uri: ${ROUTE_7_DEV_URI}
+          predicates:
+            - ${ROUTE_7_DEV_PREDICATES}
+          filters:
+            - ${ROUTE_7_DEV_FILTERS}
 
 logging:
   level:
