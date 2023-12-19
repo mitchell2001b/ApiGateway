@@ -55,6 +55,13 @@ spring:
             - ${ROUTE_7_DEV_PREDICATES}
           filters:
             - ${ROUTE_7_DEV_FILTERS}
+        - id: ${ROUTE_8_DEV_ID}
+          uri: ${ROUTE_8_DEV_URI}
+          predicates:
+            - ${ROUTE_8_DEV_PREDICATES}
+          filters:
+            - ${ROUTE_8_DEV_FILTERS}
+
 
 logging:
   level:

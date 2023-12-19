@@ -55,6 +55,24 @@ spring:
             - ${ROUTE_5_PROD_PREDICATES}
           filters:
             - ${ROUTE_5_PROD_FILTERS}
+        - id: ${ROUTE_6_PROD_ID}
+          uri: ${ROUTE_6_PROD_URI}
+          predicates:
+            - ${ROUTE_6_PROD_PREDICATES}
+          filters:
+            - ${ROUTE_6_PROD_FILTERS}
+        - id: ${ROUTE_7_PROD_ID}
+          uri: ${ROUTE_7_PROD_URI}
+          predicates:
+            - ${ROUTE_7_PROD_PREDICATES}
+          filters:
+            - ${ROUTE_7_PROD_FILTERS}
+        - id: ${ROUTE_8_PROD_ID}
+          uri: ${ROUTE_8_PROD_URI}
+          predicates:
+            - ${ROUTE_8_PROD_PREDICATES}
+          filters:
+            - ${ROUTE_8_PROD_FILTERS}
 
 logging:
   level:
