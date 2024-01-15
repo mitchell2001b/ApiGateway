@@ -73,6 +73,12 @@ spring:
             - ${ROUTE_8_PROD_PREDICATES}
           filters:
             - ${ROUTE_8_PROD_FILTERS}
+        - id: ${ROUTE_9_PROD_ID}
+          uri: ${ROUTE_9_PROD_URI}
+          predicates:
+            - ${ROUTE_9_PROD_PREDICATES}
+          filters:
+            - ${ROUTE_9_PROD_FILTERS}
 
 logging:
   level:
